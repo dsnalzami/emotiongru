@@ -1,0 +1,47 @@
+============================================================
+03_build_dataset.py (REBUILD) -- DATASET SUMMARY
+============================================================
+
+OUTPUT ARRAYS (no normalization -- windowed only):
+  X_f0.npy  F0 none    : (309, 10, 468, 3) float32
+  X_f1.npy  F1 SavGol  : (309, 10, 468, 3) float32
+  X_f2.npy  F2 OEF     : (309, 10, 468, 3) float32
+  X_raw.npy alias      : X_f0.npy
+  y_6cls.npy           : (309,) int32
+  subjects_6cls.npy    : (309,) object
+
+PIPELINE ORDER (per sequence):
+  [1] Load full (T, 468, 3) from .npy (02 output)
+  [2] Apply smoothing on ALL T frames (BEFORE windowing)
+  [3] Apply last-P=10 windowing (reflect-pad if T<P)
+  Normalization (nose-center + XY/Z): in training loop
+  Augmentation: in training loop (training only)
+
+SMOOTHING PARAMETERS:
+  SG  : window=5, polyorder=2
+  OEF : fc_min=1.0, beta=0.1, d_cutoff=1.0, fs=1.0
+
+  Windowing     : last-P=10, PAD_MODE=reflect
+  Padded (T<P)  : 12
+  Skipped       : 0
+
+CLASS DISTRIBUTION:
+  Emotion        Idx    Count         IR
+  --------------------------------------
+  anger            0       45       5.87
+  disgust          1       59       4.24
+  fear             2       25      11.36
+  happiness        3       69       3.48
+  sadness          4       28      10.04
+  surprise         5       83       2.72
+  Total              : 309
+  Max imbalance ratio: 11.36
+
+FRAME COUNT STATS (original, before windowing):
+  Min    : 6
+  Max    : 71
+  Mean   : 18.26
+  Median : 16.0
+  Std    : 8.64
+
+============================================================
