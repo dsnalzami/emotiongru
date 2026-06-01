@@ -1,0 +1,51 @@
+=================================================================
+STATISTICAL ANALYSIS SUMMARY REPORT
+Generated: 2026-05-30 14:53:15
+=================================================================
+
+1. MAIN MODEL RESULTS (for Table 5)
+----------------------------------------
+  Protocol: LOSO
+  Macro F1: 0.8947 +/- 0.0201  CI95=[0.8822, 0.9073]  (n=10 seeds)
+  Accuracy: 0.9155 +/- 0.0166
+
+  Protocol: G10F
+  Macro F1: 0.8229 +/- 0.0238  CI95=[0.8072, 0.8363]  (n=10 seeds)
+  Accuracy: 0.8605 +/- 0.0197
+
+2. HYPOTHESIS TEST RESULTS (for Table 4)
+----------------------------------------
+  H1: Trained 1D-CNN (B3) > TimeDistributed Dense (B1)
+    Conclusion: NS -- insufficient power  (p=0.2324)
+
+  H2: 3D input (A2) outperforms 2D input (A1), especially fear/sadness
+    Conclusion: NS or no data  (p=0.3223)
+
+  H3: GRU (C1) is equivalent to LSTM (C2) on CK+ (TOST delta=0.02)
+    Conclusion: Not equivalent or no data  (p=0.7136)
+
+  H4: Weighted CE (D2) >= standard CE (D1) for minority recall
+    Conclusion: NS or no data  (p=0.0098)
+
+  H5: F2 (OEF) vs F1 (SG): smoothing effect on fast-onset emotions
+    Conclusion: F1>=F2 by 0.1053  (p=nan)
+
+  H6: G2 targeted augmentation improves over no augmentation (G0)
+    Conclusion: G2>G0 by 0.0834  (p=nan)
+
+3. KEY ABLATION FINDINGS
+----------------------------------------
+  Main model (F1+G2): 0.8947 +/- 0.0201
+  Best FG combo: F1+G2 = 0.8947
+
+  Main model (ABCDE): 0.8229 +/- 0.0238
+  Best ABCDE variant: A2_B1_C1_D2_E2 = 0.8413
+
+4. PAPER COPY-PASTE PHRASES
+----------------------------------------
+  'The proposed model achieved a macro-F1 of 0.895 +/- 0.020 (95% CI: [0.882, 0.907]) under LOSO cross-validation with 10 random seeds, and 0.916 +/- 0.017 accuracy.'
+
+  NOTE: Replace placeholder values above with actual results.
+  All values rounded to 3 decimal places for paper text.
+
+=================================================================

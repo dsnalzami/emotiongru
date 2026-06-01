@@ -1,0 +1,2 @@
+hypothesis,comparison,method,n_pairs,bound_delta,C1_GRU_mean,C2_LSTM_mean,mean_diff,p_lower,p_upper,p_tost,equivalent_at_alpha_0.05,cohens_d_paired,seed_level_p_tost,C1_n_seeds,C2_n_seeds
+H3,GRU_C1_vs_LSTM_C2,paired_TOST_on_G10F_fold_means,10,0.02,0.7967216940123286,0.7693918858665685,0.027329808145760283,0.002181510623052535,0.7135632616067542,0.7135632616067542,False,0.6898480196013874,0.6229627643292479,10,3

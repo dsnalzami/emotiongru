@@ -1,0 +1,5 @@
+setup,n_group_a,n_group_b,alpha,power_target,d_min,note
+LOSO_10seeds_vs_Ablation_3seeds,10,3,0.05,0.8,2.026444415141693,Study is powered to detect Cohen's d >= 2.03 at 80% power (main 10s vs ablation 3s)
+LOSO_10seeds_vs_Ablation_3seeds,10,3,0.05,0.9,2.3475542462465886,Study is powered to detect Cohen's d >= 2.35 at 90% power (main 10s vs ablation 3s)
+G10F_paired_folds_n10,10,10,0.05,0.8,0.996001910781186,Wilcoxon/TOST on 10 fold pairs: powered for d >= 1.00 at 80%
+G10F_paired_folds_n10,10,10,0.05,0.9,1.1545650279320896,Wilcoxon/TOST on 10 fold pairs: powered for d >= 1.15 at 90%

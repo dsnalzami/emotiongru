@@ -1,0 +1,7 @@
+hypothesis,description,test,p_value,bonferroni_alpha,cohens_d,main_f1,comparison_f1,delta_f1,significant,conclusion
+H1,Trained 1D-CNN (B3) > TimeDistributed Dense (B1),"Wilcoxon (G10F fold-level, n=10 pairs)",0.232421875,0.004545454545454546,-0.44532672383171196,0.7967216940123286,0.8290714613044334,-0.032349767292104814,False,NS -- insufficient power
+H2,"3D input (A2) outperforms 2D input (A1), especially fear/sadness","Wilcoxon (G10F fold-level, n=10 pairs)",0.322265625,0.004545454545454546,-0.338639391849294,0.7967216940123286,0.8138898478256064,-0.017168153813277742,False,NS or no data
+H3,GRU (C1) is equivalent to LSTM (C2) on CK+ (TOST delta=0.02),"Paired TOST (delta=0.02, n=10 folds)",0.7135632616067542,,0.6898480196013874,0.7967216940123286,0.7693918858665685,0.027329808145760283,False,Not equivalent or no data
+H4,Weighted CE (D2) >= standard CE (D1) for minority recall,"Wilcoxon (G10F fold-level, n=10 pairs)",0.009765625,0.004545454545454546,1.3309454379617836,0.7967216940123286,0.7411647895639123,0.05555690444841632,False,NS or no data
+H5,F2 (OEF) vs F1 (SG): smoothing effect on fast-onset emotions,FG ablation comparison (F2+G2 vs F1+G2),,,,0.8946753112088937,0.789390446341685,-0.10528486486720867,,F1>=F2 by 0.1053
+H6,G2 targeted augmentation improves over no augmentation (G0),FG ablation comparison (F1+G2 vs F1+G0),,,,0.8946753112088937,0.811280118551688,0.08339519265720563,,G2>G0 by 0.0834
